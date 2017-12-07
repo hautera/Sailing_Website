@@ -15,27 +15,21 @@ const btnLogin = document.getElementById("sign-in");
  * Signs a user in after they submit their
  * sign in info
  */
-function signin(Event e) {
-  //get user info
-  const userEmail = document.getElementById("userEmail").value;
-  const userPwd = document.getElementById("pwd").value;
-  const auth = firebase.auth();
+ btnLogin.addEventListener('click', e => {
+   //get user info
+   const userEmail = document.getElementById("userEmail").value;
+   const userPwd = document.getElementById("pwd").value;
+   const auth = firebase.auth();
 
-  console.log( userEmail );
-  console.log( userPwd );
+   console.log( userEmail );
+   console.log( userPwd );
 
-  const prom = auth.signInWithEmailAndPassword( userEmail, userPwd );
-  prom.catch( e => {
-     if(e.code == "auth/user-not-found"){	//user not found :(
-        window.location.replace("localhost:8888/signin/?error=unknown-user");
-     } else {	//unknown error :0
-        console.log( e.message );
-     }
-  });
-}
-/**
- * Signs a user in after they submit their
- * sign in info
- */
- btnLogin.addEventListener('click', e =>  signin( e ));
- 
+   const prom = auth.signInWithEmailAndPassword( userEmail, userPwd );
+   prom.catch( e => {
+      if(e.code == "auth/user-not-found"){	//user not found :(
+         window.location.replace("localhost:8888/signin/?error=unknown-user");
+      } else {	//unknown error :(
+         console.log( e.message );
+      }
+   });
+ } );

@@ -41,6 +41,6 @@
 			</div>
 		</div>
 	</div>
-	<?php include("include/footer-inc.php"); ?>
+	<?php include("include/footer.html"); ?>
 </body>
 </html>

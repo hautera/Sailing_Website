@@ -8,10 +8,10 @@
 </head>
 
 <body>
-	<?php include("include/header-inc.php"); ?>
+	<?php include("include/header.html"); ?>
 	<div class="container">
-		<h1>Sailors:</h1><p>It's not done yet :(</p>
+		<h1>SAILORS COMING SOON</h1>
 	</div>
-	<?php include("include/footer-inc.php"); ?>
+	<?php include("include/footer.html"); ?>
 </body>
 </html>

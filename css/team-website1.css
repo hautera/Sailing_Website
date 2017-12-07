@@ -1,7 +1,4 @@
 @charset "UTF-8";
-.logo:hover{
-	opacity: 0.5;
-}
 .logo{
 	height: 100px;
 	position: absolute;
@@ -10,7 +7,7 @@
 	z-index: 2;
 }
 .thin-strip{
-	height: 90px;
+	height: 130px;
 	width: 100%;
 	background: #4b2e83;
 	align-content: center;
@@ -19,14 +16,14 @@
 	position: relative;
 	z-index: 2;
 }
-.thin-strip-white{
+/*.thin-strip-white{
 	height: 50px;
 	width: 100%;
 	padding-top: 40px;
 	position: relative;
 	padding-bottom: 40px;
 	z-index: 2;
-}
+}*/
 .sign-in-text {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: white;
@@ -48,7 +45,9 @@
 	opacity: 0.8;
 }
 .nav-links{
-	color: #4b2e83;
+	position: relative;
+	top: 50px;
+	color: white;
 	font-size: 20px;
 	text-decoration: none;
 	padding-left: 20px;

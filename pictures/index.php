@@ -6,10 +6,11 @@
 <meta name="Description" content="Pictures of UW the UW Sailing Team">
 <meta name="Content-Type" content="Pictures">
 <link href="../css/team-website1.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<?php include("../include/header-inc.php")?>
+	<?php include("../include/header.html")?>
 	<div class="slideshow-container">
 			<div class="mySlides fade">
 				<div class="numbertext">1 / 12</div>
@@ -126,6 +127,6 @@
 		  dots[slideIndex-1].className += " active";
 		}
 	</script>
-	<?php include("../include/footer-inc.php")?>
+	<?php include("../include/footer.html")?>
 </body>
 </html>

@@ -4,11 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Join the Team!</title>
-	<link href="css/team-website1.css" rel="stylesheet" type="text/css">
+	<link href="../css/team-website1.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<?php include("include/header-inc.php"); ?>
+	<?php include("../include/header.html"); ?>
 
 	<h1>So you want to be a husky sailor?</h1>
 	<p>It is a huge commitment to be a full member of the team. It means going to sailing practice multiple times a week. It means taking lots of 8:30 classes. It means studying in Mother Ode until 4am. It means spending almost every weekend at regattas. But it's worth it! Obviously, not everyone is down to do that, and we understand. If you are, great! If you aren't that doesn't mean you still can't sail with us!</p>
@@ -19,6 +19,6 @@
 	<h3>Step 4:</h3><p>Show Up! We practice at <a href="https://sailsandpoint.org">Sail Sand Point.</a> That's a ways from campus, so we have <a href="#">directions here.</a></p>
 
 
-	<?php include("include/footer-inc.php"); ?>
+	<?php include("../include/footer.html"); ?>
 </body>
 </html>
