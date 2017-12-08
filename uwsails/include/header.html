@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+</head>
+
+<body>
+	<header class="thin-strip">
+		<a href="/uwsails/"><img class="logo logo-main" src="/uwsails/images/Fancylogo.svg">
+		<img class="logo" src="/uwsails/images/FancylogoGold.svg"></a>
+		<h1 class="main-title">University of Washington Sailing Team</h1>
+		<div class = "sign-in-text">
+			<!Shown if that there user is not signed in  :)>
+			<div id="sign-in-form">
+				<input type = "email" id = "userEmail" placeholder="Email" class="signin-form-header" > </br>
+				<input type = "password" id = "pwd" placeholder="Password" class="signin-form-header"> </br>
+				<input type = "submit" value = "Sign In" id = "sign-in" class="sign-in-btn-header">
+				<script src="/uwsails/include/signin.js"></script>
+				<! script for signing in :)>
+			</div>
+		</div>
+		<nav>
+			<a href="/uwsails" class="nav-links">About</a>
+			<a href="/uwsails/pictures.php" class="nav-links">Pictures</a>
+			<a href="/uwsails/news.php" class="nav-links">News and Events</a>
+			<a href="/uwsails/schedule.php" class="nav-links">Schedule</a>
+			<a href="/uwsails/joinus.php" class="nav-links">Join the Team</a>
+			<a href="/uwsails/support.php" class="nav-links">Support us</a>
+		</nav>
+	</header>
+</body>
+</html>
