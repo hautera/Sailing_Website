@@ -2,7 +2,9 @@
 :root{
 	--husky_purple: #4b2e83;
 	--husky_gold: #85754d;
+	--red_error: #ff0000;
 }
+
 html {
 	overflow-x: hidden;
 }
@@ -274,4 +276,43 @@ body {font-family: Verdana,sans-serif;margin:0}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
+}
+
+.big-form {
+	left: 3%;
+	position: relative;
+	width: 90%;
+	border-radius: 6px;
+	border: 2px solid var(--husky_purple);
+	padding: 10px 10px;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.big-form:focus {
+	border: 3px solid var(--husky_gold);
+	border-bottom: 5px solid var(--husky_gold);
+}
+
+.big-btn{
+	left: 25%;
+	position: relative;
+	width: 50%;
+	border-radius: 6px;
+	border: 2px solid var(--husky_purple);
+	padding: 10px 20px;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.big-btn:hover{
+	border: 3px solid var(--husky_gold);
+	border-bottom: 5px solid var(--husky_gold);
+}
+
+.signin-error{
+	position: relative;
+	color: var(--red_error);
+	font-size: 20px;
+	text-decoration: underline;
 }

@@ -12,17 +12,12 @@
 
 <body>
 	<?php include("include/header.html"); ?>
-	 <h3> <b>Sign Up: </b></h3>
-		First name:<br>
-		<input type="text" id="firstname"><br>
-		Last name:<br>
-		<input type="text" id='lastname'><br>
-		Email:<br>
-		<input type="text"  id="signup_email"><br>
-		Password:<br>
-		<input type="password"  id="signup_pwd"><br>
-		<input type="button"  Value="Sign Up" id="submit">
-		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+	 <h1> <b>Sign Up: </b></h1><p class = "signin-error" id="Error-Text"></p>
+		<input type="text" id="firstname" class="big-form" placeholder="First Name">
+		<input type="text" id='lastname' class="big-form" placeholder="Last Name">
+		<input type="email" id="signup_email" class="big-form" placeholder="Email">
+		<input type="password"  id="signup_pwd" class="big-form" placeholder="Pasword">
+		<input type="button"  Value="Sign Up" id="submit" class="big-btn">
 		<script src="include/signup.js"></script>
 	<?php include("include/footer.html"); ?>
 </body>

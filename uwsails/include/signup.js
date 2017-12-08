@@ -1,15 +1,4 @@
-var config = {
-   apiKey: "AIzaSyCQotoFvcv3aqsAtusH9ynOgGalusrnT9g",
-   authDomain: "husky-sailing-site.firebaseapp.com",
-   databaseURL: "https://husky-sailing-site.firebaseio.com",
-   projectId: "husky-sailing-site",
-   storageBucket: "husky-sailing-site.appspot.com",
-   messagingSenderId: "653011603129"
-};
-
-const app = firebase.initializeApp(config);
-
-const submit_button = document.getElementById('submit');
+var submit_button = document.getElementById('submit');
 
 /**
  * Creates a user with the email, password and name :)
@@ -25,16 +14,18 @@ submit_button.addEventListener( 'click', function(e) {
    var user_pwd = document.getElementById("signup_pwd").value;
    var auth = firebase.auth();
 
-   console.log( user_pwd );
-   if( user_pwd.length > 6 ){
-
-      auth.createUserWithEmailAndPassword( user_email, user_pwd ).catch( function( e ){
-         console.log("Fuck this shit I'm out: " + e.message); //todo maybe make the log more sober
-         window.location.replace("localhost:8888/signup/");
-      });
-
-      var user = auth.currentUser;
-      if( user != null ) {
+   if( user_pwd.length <= 6 ){
+      document.getElementById("Error-Text").innerHTML = "PASSWORD IS NOT STRONG ENOUGH";
+      return;
+   } else if (first_name == ""){
+      document.getElementById("Error-Text").innerHTML = "ENTER A FIRST NAME";
+      return;
+   } else  if(last_name == ""){
+      document.getElementById("Error-Text").innerHTML = "ENTER A LAST NAME";
+      return;
+   } else {
+      var prom = auth.createUserWithEmailAndPassword( user_email, user_pwd ).then( function( e ){
+         //IF SIGN UP SUCCESS
          //add username
          user.updateProfile({
             displayName: first_name + " " + last_name,
@@ -42,12 +33,14 @@ submit_button.addEventListener( 'click', function(e) {
          });
 
          //sends a verification email @hayden
-         user.sendEmailVerification()
-         .then( e => {
-            window.location.replace("localhost:8888/signup/verify/");
+         user.sendEmailVerification().then( e => {
+            window.location.replace("/uwsails/signup/verify.php");
          });
-      } else {
-         console.log("This motherfucker isn't signed in >:(");
-      }
+      }).catch( function( e ){
+         //IF SOMEONE FUCKED UP
+         console.log("Fuck this shit I'm out: " + e.message); //todo maybe make the log more sober
+         document.getElementById("Error-Text").innerHTML = e.message;
+
+      });
    }
 });
