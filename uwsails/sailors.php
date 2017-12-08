@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Husky Sailing Sailors</title>
+		<link rel="icon" href="images/favicon.svg">
 		<link href="css/team-website1.css" rel="stylesheet" type="text/css">
 	</head>
 
