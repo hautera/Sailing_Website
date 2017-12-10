@@ -6,11 +6,19 @@
 		<link href="/css/team-website1.css" rel="stylesheet" type="text/css">
 		<link rel="icon" href="/images/favicon.svg">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+		<script>
+			$(function(){
+				$("#header").load("/include/header.html");
+				$("#footer").load("/include/footer.html");
+			});
+		</script>
 	</head>
 
 	<body>
-		<script src="https://www.w3schools.com/lib/w3.js"></script>
-		 <div w3-include-html="/include/header.html"></div>
+		<div id="header"></div>
 
 		<h1>So you want to be a husky sailor?</h1>
 		<p>It is a huge commitment to be a full member of the team. It means going to sailing practice multiple times a week. It means taking lots of 8:30 classes. It means studying in Mother Ode until 4am. It means spending almost every weekend at regattas. But it's worth it! Obviously, not everyone is down to do that, and we understand. If you are, great! If you aren't that doesn't mean you still can't sail with us!</p>
@@ -20,8 +28,6 @@
 		<h3>Step 3:</h3><p>Show Up! We practice at <a href="https://sailsandpoint.org">Sail Sand Point.</a> That's a ways from campus, so we have <a href="#">directions here.</a></p>
 
 
-		<script src="https://www.w3schools.com/lib/w3.js"></script>
-		 <div w3-include-html="/include/footer.html"></div>
-		 <script> w3.includeHTML(); </script>
+		<div id="footer"></div>
 	</body>
 </html>

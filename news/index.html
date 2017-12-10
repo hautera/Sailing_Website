@@ -7,14 +7,22 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" href="/images/icon.png">
 		<title>UW Sailing Team News</title>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+		<script>
+			$(function(){
+				$("#header").load("/include/header.html");
+				$("#footer").load("/include/footer.html");
+			});
+		</script>
 	</head>
 
 	<body>
-		<script src="https://www.w3schools.com/lib/w3.js"></script>
-		<div w3-include-html="/include/header.html"></div>
+		<div id="header"></div>
+
 		<h1>NEWS COMING SOON</h1>
-		<script src="https://www.w3schools.com/lib/w3.js"></script>
-		<div w3-include-html="/include/footer.html"></div>
-		<script> w3.includeHTML(); </script>
+		
+		<div id="footer"></div>
 	</body>
 </html>

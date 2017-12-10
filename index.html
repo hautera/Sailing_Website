@@ -7,20 +7,26 @@
 		<link rel="icon" href="images/favicon.svg">
 		<link href="css/team-website1.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+		<script>
+			$(function(){
+				$("#header").load("/include/header.html");
+				$("#footer").load("/include/footer.html");
+			});
+		</script>
 	</head>
 
 <body>
-	<script src="https://www.w3schools.com/lib/w3.js"></script>
-	 <div w3-include-html="/include/header.html"></div>
-	 <script> w3.includeHTML(); </script>
-	<div class="container">
+	<div id="header"></div>
+		<div class="container">
 		<div>
 			<h3>About the team</h3>
 			<p>Welcome to the University of Washington Sailing team webpage. We are in the Northwest intercollegiate sailing association (NWICSA for short) we compete against other schools in the region, and in the nation. We're not practicing for the rest of the quarter. Check back in the beginning of Winter quarter for practice times! If you're a student at UW and would like to sail: come join us! No experience necessary.</p>
 			<img src="images/TeamPic3.jpg" width="500px" >
 		</div>
-		<script src="https://www.w3schools.com/lib/w3.js"></script>
-		 <div w3-include-html="/include/footer.html"></div>
-		 <script> w3.includeHTML(); </script>
+		<div id="footer"></div>
+	</div>
 </body>
 </html>

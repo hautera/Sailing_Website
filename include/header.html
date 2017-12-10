@@ -2,11 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
 </head>
 
 <body>
+	<script src="/include/signin.js"></script>
 	<header class="thin-strip">
 		<a href="/"><img class="logo logo-main" src="/images/Fancylogo.svg">
 		<img class="logo" src="/images/FancylogoGold.svg"></a>
@@ -17,7 +16,6 @@
 				<input type = "email" id = "userEmail" placeholder="Email" class="signin-form-header" > </br>
 				<input type = "password" id = "pwd" placeholder="Password" class="signin-form-header"> </br>
 				<input type = "submit" value = "Sign In" id = "sign-in" class="sign-in-btn-header">
-				<script src="/include/signin.js"></script>
 				<! script for signing in :)>
 				<script>
 					firebase.auth().onAuthStateChanged(function(user) {

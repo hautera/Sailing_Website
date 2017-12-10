@@ -13,7 +13,7 @@ var btnLogin = document.getElementById("sign-in");
 
 /**
  * Signs a user in after they submit their
- * sign in info
+ * sign in info on a click :)
  */
  btnLogin.addEventListener('click', e => {
    //get user info
@@ -27,9 +27,9 @@ var btnLogin = document.getElementById("sign-in");
 
    auth.signInWithEmailAndPassword( userEmail, userPwd )
    .then( user => {
-      //window.location.replace("/uwsails/account.php");
+      //window.location.replace("/uwsails/account.php"); //for when we make a signin window
    })
    .catch( e => {
       document.getElementById("error-text").innerHTML = "ERROR SIGNING IN";
    });
- } );
+});
