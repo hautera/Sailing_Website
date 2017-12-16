@@ -3,23 +3,41 @@
 	--husky_purple: #4b2e83;
 	--husky_gold: #85754d;
 	--red_error: #ff0000;
+	--gold: #b7a57a;
 }
 
 html {
 	overflow-x: hidden;
 }
+
+body {
+	background-color: var(--gold);
+}
+
+article {
+	width: 90%;
+	left: 4%;
+	position: relative;
+	background-color: white;
+	align-items: center;
+	padding: 20px;
+	border: 2px solid var(--husky_gold);
+}
+
 .logo{
 	height: 100px;
 	position: absolute;
 	left: 10px;
 	top: 10px;
 }
+
 .logo-main{
 	animation-name: logo_animation;
 	animation-duration: 1s;
 	opacity: 1;
 	z-index: 1;
 }
+
 .logo-main:hover{
 	animation-name: logo_animation_hover;
 	animation-duration: 1s;
@@ -46,23 +64,27 @@ html {
 	position: relative;
 	z-index: 2;
 }
-/*.thin-strip-white{
+
+.thin-strip-white{
 	height: 50px;
 	width: 100%;
 	padding-top: 40px;
 	position: relative;
 	padding-bottom: 40px;
 	z-index: 2;
-}*/
+}
+
 .sign-in-text {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: white;
 	position: relative;
 	left: 80%;
 }
+
 .logout {
 	left: 80%;
 }
+
 .link{
 	animation-name: fadein;
 	animation-duration: 1s;
@@ -109,7 +131,9 @@ html {
 	color: white;
 	font-style: normal;
 	text-align: center;
+	padding: 10px;
 }
+
 .footer-text {
 	text-decoration-color: white;
 	height: 30px;
