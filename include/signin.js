@@ -1,15 +1,21 @@
 //config firebase
-var config = {
-   apiKey: "AIzaSyCQotoFvcv3aqsAtusH9ynOgGalusrnT9g",
-   authDomain: "husky-sailing-site.firebaseapp.com",
-   databaseURL: "https://husky-sailing-site.firebaseio.com",
-   projectId: "husky-sailing-site",
-   storageBucket: "husky-sailing-site.appspot.com",
-   messagingSenderId: "653011603129"
-};
+if (!firebase.apps.length) {
+   var config = {
+         apiKey: "AIzaSyCQotoFvcv3aqsAtusH9ynOgGalusrnT9g",
+         authDomain: "husky-sailing-site.firebaseapp.com",
+         databaseURL: "https://husky-sailing-site.firebaseio.com",
+         projectId: "husky-sailing-site",
+         storageBucket: "husky-sailing-site.appspot.com",
+         messagingSenderId: "653011603129"
+   };
 
-firebase.initializeApp(config);
+   firebase.initializeApp(config);
+}
+
 var btnLogin = document.getElementById("sign-in");
+if(btnLogin == null){
+   btnLogin = document.getElementById("submit");
+}
 
 /**
  * Signs a user in after they submit their
@@ -17,8 +23,17 @@ var btnLogin = document.getElementById("sign-in");
  */
  btnLogin.addEventListener('click', e => {
    //get user info
-   const userEmail = document.getElementById("userEmail").value;
-   const userPwd = document.getElementById("pwd").value;
+   var userEmail = document.getElementById("userEmail").value;
+   var userPwd = document.getElementById("userPwd").value;
+
+   //if accidentally grabs the wrong form :(
+   if(!userEmail){
+      var userEmail = document.getElementById("email").value;
+      var userPwd = document.getElementById("pwd").value;
+   }
+
+   console.log(userEmail);
+   console.log(userPwd);
    const auth = firebase.auth();
 
    //debug, maybe don't publish this to internet
@@ -27,9 +42,15 @@ var btnLogin = document.getElementById("sign-in");
 
    auth.signInWithEmailAndPassword( userEmail, userPwd )
    .then( user => {
-      //window.location.replace("/uwsails/account.php"); //for when we make a signin window
+      window.location.replace("/signin/account/");
+      //for when we make a signin window
    })
    .catch( e => {
-      document.getElementById("error-text").innerHTML = "ERROR SIGNING IN";
+      if(window.location.pathname === "/signin/"){
+         document.getElementById("error-text").innerHTML = "ERROR SIGNING IN";
+         console.error(e.message);
+      } else {
+         document.location.replace("/signin/")
+      }
    });
 });

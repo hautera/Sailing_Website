@@ -62,11 +62,11 @@ submit_button.addEventListener( 'click', function(e) {
          //sends a verification email @hayden
          user.sendEmailVerification().then( e => {
             var db = firebase.firestore();
-            window.location.replace("/uwsails/signup/verify.php");
+            window.location.replace("/uwsails/signup/verify/");
          });
       }).catch( function( e ){
          //IF SOMEONE FUCKED UP
-         console.log("Fuck this shit I'm out: " + e.message); //todo maybe make the log more sober
+         console.log( e.message); 
          document.getElementById("Error-Text").innerHTML = e.message;
 
       });
