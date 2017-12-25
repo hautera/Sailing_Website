@@ -11,7 +11,8 @@ if (!firebase.apps.length) {
 	firebase.initializeApp(config);
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(
+function(user) {
 	 if (!user) {
 		window.location.replace("/signin/");
 	 }
