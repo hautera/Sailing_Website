@@ -5,10 +5,10 @@
 </head>
 
 <body>
-	<script src="/include/signin.js"></script>
+	<script src="/uwsails/include/signin.js"></script>
 	<header class="thin-strip">
-		<a href="/"><img class="logo logo-main" src="/images/Fancylogo.svg">
-		<img class="logo" src="/images/FancylogoGold.svg"></a>
+		<a href="/uwsails/"><img class="logo logo-main" src="/uwsails/images/Fancylogo.svg">
+		<img class="logo" src="/uwsails/images/FancylogoGold.svg"></a>
 		<h1 class="main-title">University of Washington Sailing Team</h1>
 		<div class = "sign-in-text">
 			<!Shown if that there user is not signed in  :)>
@@ -24,7 +24,7 @@
 							var btn = document.getElementById('logout');
 							btn.addEventListener( 'click', e => {
 								firebase.auth().signOut().then( signout => {
-									 window.location.replace("/");
+									 window.location.replace("/uwsails/");
 								});
 							});
 						}
@@ -33,12 +33,12 @@
 			</div>
 		</div>
 		<nav>
-			<a href="/" class="nav-links">About</a>
-			<a href="/pictures" class="nav-links">Pictures</a>
-			<a href="/news" class="nav-links">News and Events</a>
-			<a href="/schedule" class="nav-links">Schedule</a>
-			<a href="/joinus" class="nav-links">Join the Team</a>
-			<a href="/support" class="nav-links">Support us</a>
+			<a href="/uwsails/" class="nav-links">About</a>
+			<a href="/uwsails/pictures" class="nav-links">Pictures</a>
+			<a href="/uwsails/news" class="nav-links">News and Events</a>
+			<a href="/uwsails/schedule" class="nav-links">Schedule</a>
+			<a href="/uwsails/joinus" class="nav-links">Join the Team</a>
+			<a href="/uwsails/support" class="nav-links">Support us</a>
 		</nav>
 	</header>
 </body>
