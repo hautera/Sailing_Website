@@ -25,7 +25,7 @@
 		<article>
 			<h1>Husky Sailing albums:</h1>
 			<?php
-				$dir = "../pictures/albums";
+				$dir = "../pictures/Albums";
 				//open the directory
 				if( $dh = opendir( $dir ))  {
 					//read all the files
@@ -42,7 +42,7 @@
 
 							//echo $album_front; ///debugggggggggggg       ;)
 							//put out the pictures :)
-							echo "<div class ='image_box'><a href='uwsails/pictures/albums/".$file."' class='album_link'><h3 class='img_caption'>".preg_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
+							echo "<div class ='image_box'><a href='uwsails/pictures/Albums/".$file."' class='album_link'><h3 class='img_caption'>".str_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/Albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
 						}
 					}
 				}
