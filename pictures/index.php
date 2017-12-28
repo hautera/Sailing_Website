@@ -24,10 +24,30 @@
 
 		<article>
 			<h1>Husky Sailing albums:</h1>
-			<div id = "pic" class="img_container"></div>
-			<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-			<script src="/uwsails/include/pictures.js"></script>
+			<?php
+				$dir = "../pictures/albums";
+				//open the directory
+				if( $dh = opendir( $dir ))  {
+					//read all the files
+					while( ($file = readdir($dh)) !== False ) {
+						if( strpos( $file, ".") === False ){
+							$absolute_path = $dir . "/". $file;
+							//echo $absolute_path . "</br>";
+							$album_file = opendir( $absolute_path );
+							while( ($album_front = readdir($album_file)) !== False ){
+								if(strpos( $album_front, ".JPG") !== False or strpos( $album_front, ".jpg") !== False or strpos( $album_front, ".png") !== False) {
+									break;
+								}
+							}
+
+							//echo $album_front; ///debugggggggggggg       ;)
+							//put out the pictures :)
+							echo "<div class ='image_box'><a href='uwsails/pictures/albums/".$file."' class='album_link'><h3 class='img_caption'>".preg_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
+						}
+					}
+				}
+
+			?>
 		</article>
 
 		<div id="footer"></div>
