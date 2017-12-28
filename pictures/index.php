@@ -25,7 +25,7 @@
 		<article>
 			<h1>Husky Sailing albums:</h1>
 			<?php
-				$dir = "../pictures/albums";
+				$dir = "../pictures/Albums";
 				//open the directory
 				if( $dh = opendir( $dir ))  {
 					//read all the files
