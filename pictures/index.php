@@ -42,7 +42,7 @@
 
 							//echo $album_front; ///debugggggggggggg       ;)
 							//put out the pictures :)
-							echo "<div class ='image_box'><a href='uwsails/pictures/Albums/".$file."' class='album_link'><h3 class='img_caption'>".str_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/Albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
+							echo "<div class ='image_box'><a href='/uwsails/pictures/Albums/".$file."' class='album_link'><h3 class='img_caption'>".str_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/Albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
 						}
 					}
 				}
