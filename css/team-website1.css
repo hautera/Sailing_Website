@@ -10,13 +10,9 @@ html {
 	overflow-x: hidden;
 }
 
-body {
-	background-color: var(--gold);
-}
-
 article {
 	width: 90%;
-	left: 4%;
+	left: 5%;
 	position: relative;
 	background-color: white;
 	align-items: center;
@@ -24,8 +20,20 @@ article {
 	border: 2px solid var(--husky_gold);
 }
 
+.thin-strip{
+	height: 130px;
+	width: 110%;
+	left: -1%;
+	background: var(--husky_purple);
+
+	padding-top: 30px;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 2;
+}
+
 .logo{
-	height: 100px;
+	height: 150px;
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -52,26 +60,6 @@ article {
 @keyframes logo_animation_hover {
 	from{opacity: 1;}
 	to{opacity: 0;}
-}
-
-.thin-strip{
-	height: 130px;
-	width: 100%;
-	background: var(--husky_purple);
-	align-content: center;
-	padding-top: 22px;
-	padding-bottom: 10px;
-	position: relative;
-	z-index: 2;
-}
-
-.thin-strip-white{
-	height: 50px;
-	width: 100%;
-	padding-top: 40px;
-	position: relative;
-	padding-bottom: 40px;
-	z-index: 2;
 }
 
 .sign-in-text {
@@ -113,6 +101,7 @@ article {
 	font-size: 20px;
 	text-decoration: none;
 	padding-left: 20px;
+	left: 200px;
 }
 
 .main-title{
