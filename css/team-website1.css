@@ -9,23 +9,29 @@
 html {
 	overflow-x: hidden;
 }
-
+body{
+	background: var(--gold);
+}
 article {
-	width: 90%;
-	left: 5%;
+	margin: 0 auto;
+	width: 8.5in;
 	position: relative;
 	background-color: white;
 	align-items: center;
 	padding: 20px;
-	border: 2px solid var(--husky_gold);
+	border: 5px solid var(--husky_gold);
+}
+p{
+	line-height: 40px;
+	font-size: large;
 }
 
 .thin-strip{
 	height: 130px;
 	width: 110%;
+	top: -10px;
 	left: -1%;
 	background: var(--husky_purple);
-
 	padding-top: 30px;
 	padding-bottom: 10px;
 	position: relative;
@@ -263,4 +269,17 @@ article {
 	animation-duration: 1s;
 	text-decoration: none;
 	text-align: center;
+}
+.article_link{
+	text-align: center;
+	background: var(--husky_purle);
+	color: var(--husky_purple);
+	text-decoration: none;
+	animation-name: fadein;
+	animation-duration: 1s;
+}
+.article_link:hover{
+	animation-name: fadeout;
+	animation-duration: 0.5s;
+	opacity: 0.5;
 }
