@@ -42,15 +42,15 @@ if(btnLogin == null){
 
    auth.signInWithEmailAndPassword( userEmail, userPwd )
    .then( user => {
-      window.location.replace("/signin/account/");
+      window.location.replace("/uwsails/signin/account/");
       //for when we make a signin window
    })
    .catch( e => {
-      if(window.location.pathname === "/signin/"){
+      if(window.location.pathname === "/uwsails/signin/"){
          document.getElementById("error-text").innerHTML = "ERROR SIGNING IN";
          console.error(e.message);
       } else {
-         document.location.replace("/signin/")
+         document.location.replace("/uwsails/signin/")
       }
    });
 });

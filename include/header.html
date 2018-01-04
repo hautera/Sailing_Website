@@ -5,7 +5,6 @@
 </head>
 
 <body>
-	<script src="/uwsails/include/signin.js"></script>
 	<header class="thin-strip">
 		<a href="/uwsails/"><img class="logo logo-main" src="/uwsails/images/Fancylogo.svg">
 		<img class="logo" src="/uwsails/images/FancylogoGold.svg"></a>
@@ -17,6 +16,7 @@
 				<input type = "password" id = "userPwd" placeholder="Password" class="signin-form-header"> </br>
 				<input type = "submit" value = "Sign In" id = "sign-in" class="sign-in-btn-header">
 				<! script for signing in :)>
+				<script src="/uwsails/include/signin.js"></script>
 				<script>
 					firebase.auth().onAuthStateChanged(function(user) {
 						if (user) {
