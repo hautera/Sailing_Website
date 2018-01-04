@@ -9,6 +9,7 @@
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
    	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
    	<script>
    		$(function(){
    			$("#header").load("/uwsails/include/header.html");
@@ -21,18 +22,15 @@
 
       <article>
          <h1> <b>New Sailor? </b></h1><p class = "signin-error" id="Error-Text"></p>
-     		<input type="text" id="firstname" class="big-form" placeholder="First Name">
-     		<input type="text" id='lastname' class="big-form" placeholder="Last Name">
-         <input type="text" id="exp" class="big-form" placeholder="Sailing Experience?"><br>
-         <input type="checkbox" id="class1" class="" value="Freshman">Freshman<br>
-         <input type="checkbox" id="class2" class="" value="Sophmore">Sophmore<br>
-         <input type="checkbox" id="class3" class="" value="Junior">Junior<br>
-         <input type="checkbox" id="class4" class="" value="Senior">Senior<br>
-         <input type="checkbox" id="class5" class="" value="Other">Other<br>
-         <input type="tel" id="phone" class="big-form" placeholder="Phone Number">
-     		<input type="email" id="signup_email" class="big-form" placeholder="Email">
-     		<input type="password"  id="signup_pwd" class="big-form" placeholder="Pasword">
-     		<input type="button"  Value="Sign Up" id="submit" class="big-btn">
+
+        		<input type="text" id="firstname" class="big-form" placeholder="First Name" required>
+        		<input type="text" id='lastname' class="big-form" placeholder="Last Name" required>
+            <input type="tel" id="phone" class="big-form" placeholder="Phone Number">
+        		<input type="email" id="signup_email" class="big-form" placeholder="Email" required>
+        		<input type="password"  id="signup_pwd" class="big-form" placeholder="Pasword" required>
+        		<input type="submit"  Value="Sign Up" id="submit" class="big-btn">
+
+      <script src = '/uwsails/include/new_sailor.js'></script>
       </article>
 
       <div id="footer"></div>

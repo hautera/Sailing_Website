@@ -59,6 +59,8 @@ function(user) {
 	 }
 });
 
+
+
 function admin(user, user_info){
 	document.getElementById('role').innerHTML ="Site Admin";
 }

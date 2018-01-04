@@ -14,6 +14,6 @@ if (!firebase.apps.length) {
 firebase.auth().onAuthStateChanged(
 function(user) {
 	 if (!user) {
-		window.location.replace("/signin/");
+		window.location.replace("/uwsails/signin/");
 	 }
 });
