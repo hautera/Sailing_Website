@@ -20,7 +20,7 @@
 				<script>
 					firebase.auth().onAuthStateChanged(function(user) {
 						if (user) {
-						 	document.getElementById('sign-in-form').innerHTML = "<p>Hello </br>" + user.displayName + "!</br>" +"<input type = 'submit' value = 'Logout' id = 'logout' class='sign-in-btn-header'></br></p>";
+						 	document.getElementById('sign-in-form').innerHTML = "<h4>Hello </br>" + user.displayName + "!</br>" +"<input type = 'submit' value = 'Logout' id = 'logout' class='sign-in-btn-header'></br></h4>";
 							var btn = document.getElementById('logout');
 							btn.addEventListener( 'click', e => {
 								firebase.auth().signOut().then( signout => {
@@ -33,12 +33,12 @@
 			</div>
 		</div>
 		<nav>
-			<a href="/uwsails/" class="nav-links">About</a>
+			<h4><a href="/uwsails/" class="nav-links">About</a>
 			<a href="/uwsails/pictures" class="nav-links">Pictures</a>
 			<a href="/uwsails/news" class="nav-links">News and Events</a>
 			<a href="/uwsails/schedule" class="nav-links">Schedule</a>
 			<a href="/uwsails/joinus" class="nav-links">Join the Team</a>
-			<a href="/uwsails/support" class="nav-links">Support us</a>
+			<a href="/uwsails/support" class="nav-links">Support us</a></h4>
 		</nav>
 	</header>
 </body>
