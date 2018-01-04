@@ -242,12 +242,7 @@ p{
 	text-decoration: underline;
 }
 .smoll_img{
-	width: 6in;
-}
-.img_container{
-	text-align: center;
-	padding: 20px;
-	position: relative;
+	width 100%;
 }
 .img_caption{
 	text-decoration: none;
@@ -261,12 +256,12 @@ p{
 }
 .album_link:hover{
 	animation-name: fadeout;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	opacity: 0.5;
 }
 .album_link{
 	animation-name: fadein;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	text-decoration: none;
 	text-align: center;
 }
@@ -282,4 +277,7 @@ p{
 	animation-name: fadeout;
 	animation-duration: 0.5s;
 	opacity: 0.5;
+}
+.article-text-box{
+	height: 11in;
 }
