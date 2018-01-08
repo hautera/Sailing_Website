@@ -3,6 +3,9 @@
 <html>
 <head>
 		<meta charset="UTF-8">
+		<meta name = "description" content = "The official University of Washington sailing team webpage. Home of Husky Sailing.">
+		<meta name = "keywords" content = "Sailing, University of Washington, Husky, Husky Sailing, Husky sailing team, University of Washington Sailing team, College sailing, club sports">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>UW Sailing Team</title>
 		<link rel="icon" href="/uwsails/images/favicon.png">
 		<link href="../uwsails/css/team-website1.css" rel="stylesheet" type="text/css">
