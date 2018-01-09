@@ -44,7 +44,7 @@
 							}
 
 							//put out the pictures :)
-							echo "<div class ='image_box'><a href='/uwsails/pictures/albums?album=".$file."' class='album_link'><h3 class='img_caption'>".str_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
+							echo "<div class ='image_box'><h2 class='img_caption'>".str_replace("_", " ", $file)."</h2><a href='/uwsails/pictures/albums?album=".$file."' class='album_link'><img src='/uwsails/pictures/albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
 						}
 					}
 				}
