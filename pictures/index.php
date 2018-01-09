@@ -20,11 +20,13 @@
 		</head>
 
 	<body>
-		<div id="header"></div>
+		<?php include "../include/header.html"; ?>
 
 		<article>
 			<h1>Husky Sailing albums:</h1>
+
 			<?php
+			//writes all the pictures to the file :)
 				$dir = "../pictures/albums";
 				//open the directory
 				if( $dh = opendir( $dir ))  {
@@ -32,15 +34,15 @@
 					while( ($file = readdir($dh)) !== False ) {
 						if( strpos( $file, ".") === False ){
 							$absolute_path = $dir . "/". $file;
-							//echo $absolute_path . "</br>";
 							$album_file = opendir( $absolute_path );
+
+							//gets all
 							while( ($album_front = readdir($album_file)) !== False ){
 								if(strpos( $album_front, ".JPG") !== False or strpos( $album_front, ".jpg") !== False or strpos( $album_front, ".png") !== False) {
 									break;
 								}
 							}
 
-							//echo $album_front; ///debugggggggggggg       ;)
 							//put out the pictures :)
 							echo "<div class ='image_box'><a href='/uwsails/pictures/albums?album=".$file."' class='album_link'><h3 class='img_caption'>".str_replace("_", " ", $file)."</h3><img src='/uwsails/pictures/albums/".$file. "/".$album_front."' class='smoll_img'/></a></div>";
 						}
@@ -50,6 +52,6 @@
 			?>
 		</article>
 
-		<div id="footer"></div>
+		<?include "../include/footer.html"; ?>
 	</body>
 </html>

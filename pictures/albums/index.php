@@ -40,8 +40,8 @@
 							}
 						}
 						echo "</div>";
-						echo"<input type = 'button' class = 'next slideshow-btn' id = 'next' value = 'Next Image >'></input>";
-						echo "<input type = 'button' class = 'prev slideshow-btn' id ='prev' value = '< Prev Image'></input>";
+						echo "<input type = 'button' class = 'prev big-btn' id ='prev' value = '< Prev Image'></input>";
+						echo"<input type = 'button' class = 'next big-btn' id = 'next' value = 'Next Image >'></input>";
 					}
 				} else {
 					echo "<a href='../'><input type = 'button' value='< Back' class ='big-btn' style = 'left: 0px;'></input></a>";

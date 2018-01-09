@@ -39,7 +39,7 @@ p{
 }
 
 .logo{
-	height: 150px;
+	height: 130px;
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -194,13 +194,19 @@ p{
 }
 
 @keyframes fadein {
-	from{opacity: 0.5;}
-	to{opacity:1;}
+	from{
+		opacity: 0.5;
+	} to {
+		opacity:1;
+	}
 }
 
 @keyframes fadeout{
-	from{opacity: 1;}
-	to{opacity: 0.5;}
+	from{
+		opacity: 1;
+	} to {
+		opacity: 0.5;
+	}
 }
 
 .big-form {
@@ -249,21 +255,29 @@ p{
 	position: relative;
 	color: var(--husky_purple);
 }
-
 .image_box{
 	padding-bottom: 20px;
 	border-bottom: 5px solid black;
-}
-.album_link:hover{
-	animation-name: fadeout;
-	animation-duration: 0.5s;
-	opacity: 0.5;
 }
 .album_link{
 	animation-name: fadein;
 	animation-duration: 0.5s;
 	text-decoration: none;
 	text-align: center;
+}
+.album_link:hover{
+	animation-name: fadeout;
+	animation-duration: 0.5s;
+	opacity: 0.5;
+}
+.img-slide{
+	width: 100%;
+}
+.prev{
+	left: 0%;
+}
+.next{
+	left: 0%;
 }
 .article_link{
 	text-align: center;
