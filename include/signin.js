@@ -12,10 +12,9 @@ if (!firebase.apps.length) {
    firebase.initializeApp(config);
 }
 
-var btnLogin = document.getElementById("sign-in");
-if(btnLogin == null){
-   btnLogin = document.getElementById("submit");
-}
+
+btnLogin = document.getElementById("submit");
+
 
 /**
  * Signs a user in after they submit their
@@ -23,14 +22,10 @@ if(btnLogin == null){
  */
  btnLogin.addEventListener('click', e => {
    //get user info
-   var userEmail = document.getElementById("userEmail").value;
-   var userPwd = document.getElementById("userPwd").value;
 
-   //if accidentally grabs the wrong form :(
-   if(!userEmail){
-      var userEmail = document.getElementById("email").value;
-      var userPwd = document.getElementById("pwd").value;
-   }
+var userEmail = document.getElementById("email").value;
+var userPwd = document.getElementById("pwd").value;
+
 
    console.log(userEmail);
    console.log(userPwd);
@@ -42,7 +37,7 @@ if(btnLogin == null){
 
    auth.signInWithEmailAndPassword( userEmail, userPwd )
    .then( user => {
-      window.location.replace("/uwsails/signin/account/");
+      window.location.replace("/uwsails/account/");
       //for when we make a signin window
    })
    .catch( e => {

@@ -8,16 +8,26 @@
 	<header class="thin-strip">
 		<a href="/uwsails/"><img class="logo logo-main" src="/uwsails/images/Fancylogo.svg">
 		<img class="logo" src="/uwsails/images/FancylogoGold.svg"></a>
-		<h1 class="main-title">University of Washington Sailing Team</h1>
+		<img src="/uwsails/images/titleText.svg"  class="main-title"/>
 		<div class = "sign-in-text">
 			<!Shown if that there user is not signed in  :)>
 			<div id="sign-in-form">
-				<input type = "email" id = "userEmail" placeholder="Email" class="signin-form-header" > </br>
-				<input type = "password" id = "userPwd" placeholder="Password" class="signin-form-header"> </br>
-				<input type = "submit" value = "Sign In" id = "sign-in" class="sign-in-btn-header">
 				<! script for signing in :)>
-				<script src="/uwsails/include/signin.js"></script>
 				<script>
+				//config firebase
+					if (!firebase.apps.length) {
+						var config = {
+								apiKey: "AIzaSyCQotoFvcv3aqsAtusH9ynOgGalusrnT9g",
+								authDomain: "husky-sailing-site.firebaseapp.com",
+								databaseURL: "https://husky-sailing-site.firebaseio.com",
+								projectId: "husky-sailing-site",
+								storageBucket: "husky-sailing-site.appspot.com",
+								messagingSenderId: "653011603129"
+						};
+
+						firebase.initializeApp(config);
+					}
+
 					firebase.auth().onAuthStateChanged(function(user) {
 						if (user) {
 						 	document.getElementById('sign-in-form').innerHTML = "<h4>Hello </br>" + user.displayName + "!</br>" +"<input type = 'submit' value = 'Logout' id = 'logout' class='sign-in-btn-header'></br></h4>";
@@ -32,14 +42,61 @@
 				</script>
 			</div>
 		</div>
-		<nav>
-			<h4><a href="/uwsails/" class="nav-links">About</a>
-			<a href="/uwsails/pictures" class="nav-links">Pictures</a>
-			<a href="/uwsails/news" class="nav-links">News and Events</a>
-			<a href="/uwsails/schedule" class="nav-links">Schedule</a>
-			<a href="/uwsails/joinus" class="nav-links">Join the Team</a>
-			<a href="/uwsails/support" class="nav-links">Support us</a></h4>
-		</nav>
 	</header>
+	<nav>
+		<menu>
+			<input type ="button" value="=" class = "big-btn" id = "menu" style="left: 0px;" onclick="show_menu()"/>
+			<div class = "drop-down" id="dropdown">
+				<a href="/uwsails/">About</a>
+				<a href="/uwsails/pictures">Pictures</a>
+				<a href="/uwsails/schedule">Schedule</a>
+				<a href="/uwsails/news">News and Events</a>
+				<a href="/uwsails/joinus">Join The Team</a>
+				<a href = "/uwsails/signin">Current Sailors</a>
+				<a href="/uwsails/support">Support us</a>
+			</div>
+			<script>
+				///handles the drop down menu
+				//toggles if the menu is shown when button clicked
+				function show_menu(){
+					document.getElementById("dropdown").classList.toggle("show");
+				}
+
+				//removes menu if clicked outside the menu
+				window.onclick = function(event){
+					if( !event.target.matches( ".big-btn" ) && document.getElementById("dropdown").classList.contains('show')){
+						document.getElementById("dropdown").classList.toggle("show");
+					}
+				}
+			</script>
+		</menu>
+		<h3>
+			<a href="/uwsails/" class="nav-links">About</a>
+		</h3>
+		<h3>/</h3>
+		<h3>
+			<a href="/uwsails/pictures" class="nav-links">Pictures</a>
+		</h3>
+		<h3>/</h3>
+		<h3>
+			<a href="/uwsails/news" class="nav-links">News and Events</a>
+	</h3>
+	<h3>/</h3>
+	<h3>
+			<a href="/uwsails/schedule" class="nav-links">Schedule</a>
+	</h3>
+	<h3>/</h3>
+	<h3>
+			<a href="/uwsails/joinus" class="nav-links">Join the Team</a>
+	</h3>
+	<h3>/</h3>
+	<h3>
+			<a href="/uwsails/support" class="nav-links">Support us</a>
+	</h3>
+	<h3>/</h3>
+	<h3>
+		<a href = "/uwsails/signin" class = "nav-links">Current Sailors</a>
+	</h3>
+	</nav>
 </body>
 </html>

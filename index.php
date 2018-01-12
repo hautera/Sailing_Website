@@ -18,12 +18,12 @@
 <body>
 	<?php include("../uwsails/include/header.html"); ?>
 		<article>
-		<img src="/uwsails/images/teamPic.png" width="100%"/>
+			<img src="/uwsails/images/teamPic.png" width="100%"/>
 
-		  <p>The University of Washington sailing team is a student-lead competitive sailing team. We primarily race in cFJs, but we also sail compete in lasers and J22s. We are a club sport representing the University of Washington in the Inter-collegiate Sailing Association. Our  women’s and co-ed teams are top-ranked in our division—the Northwest Inter-collegiate Sailing Association (NWISCA). The team practices at Sail Sand Point on Tuesdays, Wednesdays, and Fridays. We have around 20 active members, but we’re always looking for more.
-		</p>
+			  <p>The University of Washington sailing team is a student-lead competitive sailing team. We primarily race in cFJs, but we also sail compete in lasers and J22s. We are a club sport representing the University of Washington in the Inter-collegiate Sailing Association. Our  women’s and co-ed teams are top-ranked in our division—the Northwest Inter-collegiate Sailing Association (NWISCA). The team practices at Sail Sand Point on Tuesdays, Wednesdays, and Fridays. We have around 20 active members, but we’re always looking for more.
+			</p>
 			<div><h3><a href="/uwsails/about/" class="article_link">READ MORE ></a></h3></div>
-	</article>
+		</article>
 	<?php include("../uwsails/include/footer.html"); ?>
 </body>
 </html>

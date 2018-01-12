@@ -11,12 +11,14 @@ html {
 }
 article {
 	margin: 0 auto;
-	width: 8.5in;
+	width: 80%;
+	max-width: 8.5in;
 	position: relative;
 	background-color: white;
 	align-items: center;
 	padding: 20px;
 	border: 5px solid $husky-gold;
+	box-shadow: 4px 8px 16px 0px black;
 }
 p{
 	line-height: 40px;
@@ -58,19 +60,21 @@ p{
 
 ////////////////////////////////////HEADER CODE///////////////////////////////////////////////////////////
 .thin-strip{
-	height: 130px;
+	@media screen and (min-width: 480px){
+		height: 90px;
+	}
 	width: 110%;
 	top: -10px;
 	left: -1%;
 	background: $husky_purple;
-	padding-top: 30px;
-	padding-bottom: 10px;
+	padding-top: 22px;
 	position: relative;
 	z-index: 2;
 }
 
 .logo{
-	height: 90px;
+	width: 10%;
+	max-height: 100px;
 	position: absolute;
 	left: 10px;
 	top: 10px;
@@ -90,14 +94,10 @@ p{
 }
 
 .sign-in-text {
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: white;
 	position: relative;
 	left: 80%;
-}
-
-.logout {
-	left: 80%;
+	top: -100px;
 }
 
 .nav-links:hover {
@@ -106,53 +106,25 @@ p{
 	opacity: 0.5;
 }
 
-.nav-links{
-	animation-name: fadein;
-	animation-duration: 1s;
-	position: relative;
-	top: 10px;
-	color: white;
-	font-size: 20px;
-	text-decoration: none;
-	padding-left: 10px;
-	left: 10%;
-}
 
 .main-title{
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
-	"DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	width: 60%;
-	color: white;
-	position: absolute;
-	left: 178px;
+	max-width: 550px;
+	left: 15%;
+	display: inline;
+	position: relative;
 	padding-bottom: 10px;
 	top: 4px;
-}
-.signin-form-header {
-	    width: 10%;
-	    padding: 6px 10px;
-	    box-sizing: border-box;
-		 border: 2px solid var(--husky_purple);
-		 border-radius: 5px;
-		 animation-name: fadeout;
-	 	 animation-duration: 1s;
-		 opacity: 0.5;
-}
-
-.signin-form-header:focus {
-	animation-name: fadein;
-	animation-duration: 1s;
-	border: 2px solid blue;
-	opacity: 1;
+	display: inline;
 }
 
 .sign-in-btn-header {
 	animation-name: fadeout;
 	animation-duration: 1s;
 	width: 10%;
-	padding: 6px 10px;
+	padding: 10px;
 	box-sizing: border-box;
-	border: 2px solid var(--husky_purple);
+	border: 2px solid $husky_purple;
 	border-radius: 5px;
 	background-color: white;
 	opacity: 0.5;
@@ -163,7 +135,68 @@ p{
 	animation-duration: 1s;
 	opacity: 1;
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
+nav{
+	background: white;
+	top: -30px;
+	position: relative;
+	width: 100%;
+	text-align:center;
+	@media screen and (min-width: 480px){
+		min-height: 90px;
+		menu{
+			display: none;
+		}
+		h3{
+			top: 40px;
+			position: relative;
+			padding-left: 1%;
+			padding-right: 1%;
+			color: gray;
+			display: inline;
+		}
+
+		a{
+			animation-name: fadein;
+			animation-duration: 1s;
+			color: $husky_purple;
+			text-decoration: none;
+
+		}
+	}
+
+	@media screen and (max-width: 480px){
+		h3{
+			display: none;
+		}
+	}
+}
+
+.drop-down{
+	position: absolute;
+	background: white;
+	border: 1px solid $husky-purple;
+	box-shadow: 0px 8px 16px 0px black;
+	display: none;
+	width: 60px;
+	padding: 10px 20px;
+	z-index: 1;
+	top: 45px;
+	left: 30%;
+	width:40%;
+	a{
+		display: block;
+		color: $husky_purple;
+		text-decoration: none;
+	}
+	a:hover{
+		background-color: gray;
+	}
+}
+
+.show{
+	display: inline-block;
+}
+////////////////////////////////////////////FOOTER//////////////////////////////////////////////
 
 .link{
 	animation-name: fadein;
@@ -214,21 +247,21 @@ p{
   background: #125688;
   color: white;
 }
-
+////////////////////////////////////////////?FORMS?///////////////////////////////////////////////////////
 .big-form {
 	left: 3%;
 	position: relative;
 	width: 90%;
 	border-radius: 6px;
-	border: 2px solid var(--husky_purple);
+	border: 2px solid $husky_purple;
 	padding: 10px 10px;
 	font-size: 20px;
 	padding-bottom: 10px;
 }
 
 .big-form:focus {
-	border: 3px solid var(--husky_gold);
-	border-bottom: 5px solid var(--husky_gold);
+	border: 3px solid $husky_gold;
+	border-bottom: 5px solid $husky_gold;
 }
 
 .big-btn{
@@ -236,30 +269,32 @@ p{
 	position: relative;
 	width: 50%;
 	border-radius: 6px;
-	border: 2px solid var(--husky_purple);
+	border: 2px solid $husky_purple;
 	padding: 10px 20px;
 	font-size: 20px;
 	padding-bottom: 10px;
 }
 
 .big-btn:hover{
-	border: 3px solid var(--husky_gold);
-	border-bottom: 5px solid var(--husky_gold);
+	border: 3px solid $husky_gold;
+	border-bottom: 5px solid $husky_gold;
 }
 
 .signin-error{
 	position: relative;
-	color: var(--red_error);
+	color: $red;
 	font-size: 20px;
 	text-decoration: underline;
 }
+
+///////////////////////////////////////////////////////////PICTURE PAGE///////////////////////////////////////
 .smoll_img{
-	width: 8.5in;
+	width: 100%;
 }
 .img_caption{
 	text-decoration: none;
 	position: relative;
-	color: var(--husky_purple);
+	color: $husky_purple;
 }
 .image_box{
 	padding-bottom: 20px;
@@ -276,19 +311,23 @@ p{
 	animation-duration: 0.5s;
 	opacity: 0.5;
 }
+
 .img-slide{
 	width: 100%;
 }
+
 .prev{
 	left: 0%;
 }
+
 .next{
 	left: 0%;
 }
+
+///////////////////////////////////////////////////////ARTICLES////////////////////////////////////////////
 .article_link{
 	text-align: center;
-	background: var(--husky_purle);
-	color: var(--husky_purple);
+	color: $husky_purple;
 	text-decoration: none;
 	animation-name: fadein;
 	animation-duration: 1s;

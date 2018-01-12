@@ -5,26 +5,36 @@
 		<meta name = "description" content = "The official University of Washington sailing team webpage. Home of Husky Sailing.">
 		<meta name = "keywords" content = "Sailing, University of Washington, Husky, Husky Sailing, Husky sailing team, University of Washington Sailing team, College sailing, club sports">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>UW Sailing Team Schedule</title>
-		<link href="/uwsails/css/team-website1.css" rel="stylesheet" type="text/css">
+		<link href="/uwsails/css/team-website1.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" href="/uwsails/images/favicon.png">
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<title>UW Sailing Team News</title>
 		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
-		<script>
-			$(function(){
-				$("#header").load("/uwsails/include/header.html");
-				$("#footer").load("/uwsails/include/footer.html");
-			});
-		</script>
 	</head>
+
 	<body>
-		<div id="header"></div>
+		<?php include "../include/header.html"; ?>
+
 		<article>
-			<h1>Schedule:</h1>
-			<iframe src="https://calendar.google.com/calendar/embed?src=uwsailingsite%40gmail.com&ctz=America/Los_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+			<h1>NEWS:</h1>
 		</article>
-		<div id="footer"></div>
+			<?php
+				$dir = "../news/articles";
+
+				//open news article directory
+				if( $dh = opendir( $dir )){
+					while( ($file = readdir( $dh )) !== False ){
+						//reads the files in the directory
+						if( strpos( $file, ".") === False ){ //so . .. and .DS_Store aren't included :)
+
+								//puts that there article on that there screen
+								include "../news/articles/".$file. "/prev.html";
+						}
+					}
+				}
+			?>
+
+		<?php include "../include/footer.html"; ?>
 	</body>
 </html>
