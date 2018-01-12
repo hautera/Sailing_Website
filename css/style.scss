@@ -171,18 +171,24 @@ nav{
 	}
 }
 
+.menu-btn{
+	width: 100%;
+	position: absolute;
+	left: -30px;
+	border: 2px solid $husky-purple;
+}
+
 .drop-down{
 	position: absolute;
+	width: 60%;
+	left: 15%;
 	background: white;
 	border: 1px solid $husky-purple;
 	box-shadow: 0px 8px 16px 0px black;
 	display: none;
-	width: 60px;
 	padding: 10px 20px;
 	z-index: 1;
-	top: 45px;
-	left: 30%;
-	width:40%;
+	top: 20px;
 	a{
 		display: block;
 		color: $husky_purple;

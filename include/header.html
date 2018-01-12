@@ -45,7 +45,7 @@
 	</header>
 	<nav>
 		<menu>
-			<input type ="button" value="=" class = "big-btn" id = "menu" style="left: 0px;" onclick="show_menu()"/>
+			<input type ="button" value="=" class = "menu-btn" id = "menu" style="left: 0px;" onclick="show_menu()"/>
 			<div class = "drop-down" id="dropdown">
 				<a href="/uwsails/">About</a>
 				<a href="/uwsails/pictures">Pictures</a>
@@ -64,7 +64,7 @@
 
 				//removes menu if clicked outside the menu
 				window.onclick = function(event){
-					if( !event.target.matches( ".big-btn" ) && document.getElementById("dropdown").classList.contains('show')){
+					if( !event.target.matches( ".menu-btn" ) && document.getElementById("dropdown").classList.contains('show')){
 						document.getElementById("dropdown").classList.toggle("show");
 					}
 				}
