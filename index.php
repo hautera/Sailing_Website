@@ -6,7 +6,7 @@
 		<meta name = "description" content = "The official University of Washington sailing team webpage. Home of Husky Sailing.">
 		<meta name = "keywords" content = "Sailing, University of Washington, Husky, Husky Sailing, Husky sailing team, University of Washington Sailing team, College sailing, club sports">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>UW Sailing Team</title>
+		<title>University of Washington Sailing Team</title>
 		<link rel="icon" href="/uwsails/images/favicon.png">
 		<link href="../uwsails/css/team-website1.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
 <body>
 	<?php include("../uwsails/include/header.html"); ?>
 		<article>
-			<img src="/uwsails/images/teamPic.png" width="100%"/>
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/TENXVesKMcU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 			  <p>The University of Washington sailing team is a student-lead competitive sailing team. We primarily race in cFJs, but we also sail compete in lasers and J22s. We are a club sport representing the University of Washington in the Inter-collegiate Sailing Association. Our  women’s and co-ed teams are top-ranked in our division—the Northwest Inter-collegiate Sailing Association (NWISCA). The team practices at Sail Sand Point on Tuesdays, Wednesdays, and Fridays. We have around 20 active members, but we’re always looking for more.
 			</p>
